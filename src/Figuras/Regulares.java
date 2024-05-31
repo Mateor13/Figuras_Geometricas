@@ -1,4 +1,6 @@
 package Figuras;
 
-public class Regulares {
+public class Regulares extends dosD{
+    Double aristas, vertices;
+
 }

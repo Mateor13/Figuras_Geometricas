@@ -1,4 +1,5 @@
 package Figuras;
 
-public class Irregulares {
+public class Irregulares extends dosD{
+
 }
