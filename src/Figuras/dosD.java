@@ -42,9 +42,9 @@ public class dosD extends Figurasgeometricas{
         perimetro = lado * numero_lados;
         return perimetro;
     }
-
-
-
+    public Double area(){
+        return area;
+    }
 
 
 
