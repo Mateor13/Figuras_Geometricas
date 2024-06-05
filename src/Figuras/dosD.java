@@ -1,20 +1,20 @@
 package Figuras;
 
-public class dosD extends Figurasgeometricas{
+public class dosD extends Figurasgeometricas {
     double area;
     double perimetro;
     double lado;
 
-    //constructor 
-    public dosD(){}
-    public dosD(int numero_lados, String nombre, double area, double perimetro, double lado){
+    public dosD() {}
+
+    public dosD(int numero_lados, String nombre, double area, double perimetro, double lado) {
         super(numero_lados, nombre);
         this.area = area;
         this.perimetro = perimetro;
         this.lado = lado;
-
     }
-    // getters and setters
+
+    // Getters y setters
     public double getArea() {
         return area;
     }
@@ -38,18 +38,15 @@ public class dosD extends Figurasgeometricas{
     public void setLado(double lado) {
         this.lado = lado;
     }
-    // metodos personalizados
 
-    public Double Perimetro(double perimetro, int numero_lados){
-        perimetro = lado * numero_lados;
-        return perimetro;
-    }
-    public Double area(){
-        return area;
+    // Métodos personalizados
+    public Double calcularPerimetro() {
+        return lado * numero_lados;
     }
 
-
-
-
-
+    // Método que debe ser sobrescrito
+    public Double calcularArea() {
+        // Implementación genérica o abstracta
+        return null;
+    }
 }
