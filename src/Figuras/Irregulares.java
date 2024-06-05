@@ -36,8 +36,8 @@ public class Irregulares extends dosD {
     }
     @Override
     public void mostrar_datos () {
-        System.out.println("Perímetro: " + calcularPerimetro());
-        System.out.println("Área: " + calcularArea());
+        System.out.println("El perímetro de la figura irregular es: " + calcularPerimetro());
+        System.out.println("El área de la figura irregular es: " + calcularArea());
     }
 }
 
