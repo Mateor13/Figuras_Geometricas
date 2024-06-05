@@ -44,9 +44,7 @@ public class dosD extends Figurasgeometricas {
         return lado * numero_lados;
     }
 
-    // Método que debe ser sobrescrito
     public Double calcularArea() {
-        // Implementación genérica o abstracta
-        return null;
+        return area;
     }
 }
