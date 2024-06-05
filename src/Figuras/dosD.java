@@ -4,6 +4,8 @@ public class dosD extends Figurasgeometricas{
     double area;
     double perimetro;
     double lado;
+
+    //constructor 
     public dosD(){}
     public dosD(int numero_lados, String nombre, double area, double perimetro, double lado){
         super(numero_lados, nombre);
