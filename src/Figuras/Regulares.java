@@ -35,6 +35,10 @@ public class Regulares extends dosD {
         double angulo = Math.PI / numero_lados;
         return (numero_lados * Math.pow(lado, 2)) / (4 * Math.tan(angulo));
     }
+    public void mostrarDatos () {
+        System.out.println("El área es: "+ calcularArea());
+        System.out.println("El perimetro es: "+ calcularPerimetro());
+    }
 }
 
 
