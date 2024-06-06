@@ -57,7 +57,6 @@ public class Irregulares extends dosD{
     public void mostrar_datos () {
         String redondeo = String.format("%.2f", calcularPerimetro());
         System.out.println("El perímetro de la figura irregular es: " + redondeo);
-
         System.out.println("El área de la figura irregular es: " + calcularArea());
     }
 }
