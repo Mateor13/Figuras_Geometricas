@@ -18,7 +18,7 @@ public class Irregulares extends dosD{
         this.n = x.length;
     }
 
-    public void leerDatos() {
+    public void ingresarDatos() {
         System.out.println("*** FIGURA IRREGULARES ***");
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingrese el nombre de la figura: ");

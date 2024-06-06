@@ -85,7 +85,7 @@ public class Main {
                         }
                     } else if (accion == 2) {
                         Irregulares poligono = new Irregulares();
-                        poligono.leerDatos();
+                        poligono.ingresarDatos();
                         poligono.mostrar_datos();
 
                     } else {
