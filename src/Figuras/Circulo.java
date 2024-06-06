@@ -31,7 +31,7 @@ public class Circulo extends Regulares {
     }
     public void mostrarDatos() {
         System.out.println("El área es: " + calcularArea());
-        System.out.println("El perímetro es: " + calcularPerimetro());//
+        System.out.println("El perímetro es: " + calcularPerimetro());
     }
 
 }
