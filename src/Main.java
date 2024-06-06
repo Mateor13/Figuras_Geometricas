@@ -84,21 +84,9 @@ public class Main {
                                 System.out.println("Opción no válida. Por favor, intenta de nuevo.");
                         }
                     } else if (accion == 2) {
-                        System.out.println("*** FIGURA IRREGULARES ***");
-                        System.out.println("Ingrese el número de vértices de la figura irregular:");
-                        int n = scanner.nextInt();
-                        Double[] x = new Double[n];
-                        Double[] y = new Double[n];
-
-                        for (int i = 0; i < n; i++) {
-                            System.out.println("Ingrese la coordenada x del vértice " + (i + 1) + ":");
-                            x[i] = scanner.nextDouble();
-                            System.out.println("Ingrese la coordenada y del vértice " + (i + 1) + ":");
-                            y[i] = scanner.nextDouble();
-                        }
-
-                        Irregulares figuraIrregular = new Irregulares(x, y);
-                        figuraIrregular.mostrar_datos();
+                        Irregulares poligono = new Irregulares();
+                        poligono.leerDatos();
+                        poligono.mostrar_datos();
 
                     } else {
                         System.out.println("Opción inválida. Por favor, intenta de nuevo.");
