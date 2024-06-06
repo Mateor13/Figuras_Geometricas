@@ -32,7 +32,7 @@ public class dosD extends Figurasgeometricas {
     }
 
     public double getLado() {
-        return lado;
+        return this.lado;
     }
 
     public void setLado(double lado) {

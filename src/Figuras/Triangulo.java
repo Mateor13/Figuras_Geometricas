@@ -31,6 +31,7 @@ public class Triangulo extends Regulares{
 
     @Override
     public Double calcularPerimetro() {
+
         return 3 * getLado();
     }
 

@@ -66,6 +66,7 @@ public class Main {
                                 System.out.print("Ingrese el valor de la altura del triángulo: ");
                                 double altura = scanner.nextDouble();
                                 triangulo.setAltura(altura);
+                                triangulo.setLado(base);
                                 triangulo.mostrarDatos();
                                 break;
                             case 3:
