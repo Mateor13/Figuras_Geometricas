@@ -1,11 +1,15 @@
 package Figuras;
+import java.util.Scanner;
 
-public class Irregulares extends dosD {
-    private final Double[] x;
-    private final Double[] y;
-    private final int n;
+public class Irregulares extends dosD{
+    private double[] x;
+    private double[] y;
+    private int n;
 
-    public Irregulares(Double[] x, Double[] y) {
+    // Constructor
+    public Irregulares() {}
+
+    public Irregulares(double[] x, double[] y) {
         if (x.length != y.length) {
             throw new IllegalArgumentException("Las coordenadas x e y deben tener la misma longitud");
         }
@@ -14,6 +18,25 @@ public class Irregulares extends dosD {
         this.n = x.length;
     }
 
+    public void ingresarDatos() {
+        System.out.println("*** FIGURA IRREGULARES ***");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese el nombre de la figura: ");
+        this.setNombre(scanner.nextLine());
+
+        System.out.print("Ingrese el número de vértices del polígono: ");
+        this.n = scanner.nextInt();
+
+        this.x = new double[this.n];
+        this.y = new double[this.n];
+
+        for (int i = 0; i < this.n; i++) {
+            System.out.print("Ingrese la coordenada x del vértice " + (i + 1) + ": ");
+            this.x[i] = scanner.nextDouble();
+            System.out.print("Ingrese la coordenada y del vértice " + (i + 1) + ": ");
+            this.y[i] = scanner.nextDouble();
+        }
+    }
     @Override
     public Double calcularPerimetro() {
         double perimetro = 0.0;
@@ -23,7 +46,6 @@ public class Irregulares extends dosD {
         }
         return perimetro;
     }
-
     @Override
     public Double calcularArea() {
         double area = 0.0;
