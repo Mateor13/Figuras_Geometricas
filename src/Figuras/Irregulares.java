@@ -2,14 +2,14 @@ package Figuras;
 import java.util.Scanner;
 
 public class Irregulares extends dosD{
-    private double[] x;
-    private double[] y;
+    private Double[] x;
+    private Double[] y;
     private int n;
 
     // Constructor
     public Irregulares() {}
 
-    public Irregulares(double[] x, double[] y) {
+    public Irregulares(Double[] x, Double[] y) {
         this.x = x;
         this.y = y;
         this.n = x.length;
@@ -24,8 +24,8 @@ public class Irregulares extends dosD{
         System.out.print("Ingrese el número de vértices del polígono: ");
         this.n = scanner.nextInt();
 
-        this.x = new double[this.n];
-        this.y = new double[this.n];
+        this.x = new Double[this.n];
+        this.y = new Double[this.n];
 
         for (int i = 0; i < this.n; i++) {
             System.out.print("Ingrese la coordenada x del vértice " + (i + 1) + ": ");
@@ -57,7 +57,6 @@ public class Irregulares extends dosD{
     public void mostrar_datos () {
         String redondeo = String.format("%.2f", calcularPerimetro());
         System.out.println("El perímetro de la figura irregular es: " + redondeo);
-
         System.out.println("El área de la figura irregular es: " + calcularArea());
     }
 }
