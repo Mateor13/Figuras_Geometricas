@@ -14,7 +14,33 @@ public class Irregulares extends dosD{
         this.y = y;
         this.n = x.length;
     }
+    //Getters y setters
 
+
+    public Double[] getX() {
+        return x;
+    }
+
+    public void setX(Double[] x) {
+        this.x = x;
+    }
+
+    public Double[] getY() {
+        return y;
+    }
+
+    public void setY(Double[] y) {
+        this.y = y;
+    }
+
+    public int getN() {
+        return n;
+    }
+
+    public void setN(int n) {
+        this.n = n;
+    }
+    //Metodos personalizados
     public void ingresarDatos() {
         System.out.println("*** FIGURA IRREGULARES ***");
         Scanner scanner = new Scanner(System.in);
@@ -22,16 +48,16 @@ public class Irregulares extends dosD{
         this.setNombre(scanner.nextLine());
 
         System.out.print("Ingrese el número de vértices del polígono: ");
-        this.n = scanner.nextInt();
+        n = scanner.nextInt();
 
-        this.x = new Double[this.n];
-        this.y = new Double[this.n];
+        x = new Double[n];
+        y = new Double[n];
 
         for (int i = 0; i < this.n; i++) {
             System.out.print("Ingrese la coordenada x del vértice " + (i + 1) + ": ");
-            this.x[i] = scanner.nextDouble();
+            x[i] = scanner.nextDouble();
             System.out.print("Ingrese la coordenada y del vértice " + (i + 1) + ": ");
-            this.y[i] = scanner.nextDouble();
+            y[i] = scanner.nextDouble();
         }
     }
     @Override
