@@ -10,9 +10,6 @@ public class Irregulares extends dosD{
     public Irregulares() {}
 
     public Irregulares(double[] x, double[] y) {
-        if (x.length != y.length) {
-            throw new IllegalArgumentException("Las coordenadas x e y deben tener la misma longitud");
-        }
         this.x = x;
         this.y = y;
         this.n = x.length;
@@ -58,7 +55,9 @@ public class Irregulares extends dosD{
     }
     @Override
     public void mostrar_datos () {
-        System.out.println("El perímetro de la figura irregular es: " + calcularPerimetro());
+        String redondeo = String.format("%.2f", calcularPerimetro());
+        System.out.println("El perímetro de la figura irregular es: " + redondeo);
+
         System.out.println("El área de la figura irregular es: " + calcularArea());
     }
 }
