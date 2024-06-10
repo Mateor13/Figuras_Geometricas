@@ -12,12 +12,13 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        
         Scanner scanner = new Scanner(System.in);
         int opcion;
         int accion;
 
         do {
-            System.out.println("***** FIGURAS GEOMETRICAS *****:");
+            System.out.println("****** FIGURAS GEOMETRICAS ******:");
             System.out.println("¿Qué acción desea realizar?");
             System.out.println("1. Figuras 2D");
             System.out.println("2. Figuras 3D");
