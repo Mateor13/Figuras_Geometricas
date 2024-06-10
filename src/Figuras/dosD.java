@@ -5,13 +5,15 @@ public class dosD extends Figurasgeometricas {
     Double perimetro;
     Double lado;
 
-    public dosD() {}
+    public dosD() {
+    }
 
     public dosD(int numero_lados, String nombre, Double area, Double perimetro, Double lado) {
         super(numero_lados, nombre);
         this.area = area;
         this.perimetro = perimetro;
         this.lado = lado;
+
     }
 
     // Getters y setters

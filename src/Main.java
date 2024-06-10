@@ -30,7 +30,7 @@ public class Main {
 
             switch (opcion) {
                 case 1:
-                    System.out.println("**** Figuras 2D ****");
+                    System.out.println("****** Figuras 2D ******");
                     System.out.println("¿Qué acción desea realizar?");
                     System.out.println("1. Figuras Regulares");
                     System.out.println("2. Figuras Irregulares");
@@ -39,7 +39,7 @@ public class Main {
                     scanner.nextLine();
 
                     if (accion == 1) {
-                        System.out.println("*** Figuras Regulares ***");
+                        System.out.println("****** Figuras Regulares ******");
                         System.out.println("¿Qué acción desea realizar?");
                         System.out.println("1. Crear Cuadrilátero");
                         System.out.println("2. Crear Triángulo");
