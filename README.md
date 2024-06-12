@@ -4,3 +4,4 @@ Richard Soria,
 Alisson Viteri,
 Mateo Torres,
 Michelle Suárez,
+Wilmer Vargas.
