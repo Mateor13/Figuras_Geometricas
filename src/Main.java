@@ -18,7 +18,7 @@ public class Main {
         int accion;
 
         do {
-            System.out.println("****** FIGURAS GEOMETRICAS ******:");
+            System.out.println("******* FIGURAS GEOMETRICAS *******:");
             System.out.println("¿Qué acción desea realizar?");
             System.out.println("1. Figuras 2D");
             System.out.println("2. Figuras 3D");
@@ -30,7 +30,7 @@ public class Main {
 
             switch (opcion) {
                 case 1:
-                    System.out.println("****** Figuras 2D ******");
+                    System.out.println("******* Figuras 2D *******");
                     System.out.println("¿Qué acción desea realizar?");
                     System.out.println("1. Figuras Regulares");
                     System.out.println("2. Figuras Irregulares");
