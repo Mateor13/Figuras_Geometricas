@@ -12,12 +12,13 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        
         Scanner scanner = new Scanner(System.in);
         int opcion;
         int accion;
 
         do {
-            System.out.println("***** FIGURAS GEOMETRICAS *****:");
+            System.out.println("******* FIGURAS GEOMETRICAS *******:");
             System.out.println("¿Qué acción desea realizar?");
             System.out.println("1. Figuras 2D");
             System.out.println("2. Figuras 3D");
@@ -29,7 +30,7 @@ public class Main {
 
             switch (opcion) {
                 case 1:
-                    System.out.println("**** Figuras 2D ****");
+                    System.out.println("******* Figuras 2D *******");
                     System.out.println("¿Qué acción desea realizar?");
                     System.out.println("1. Figuras Regulares");
                     System.out.println("2. Figuras Irregulares");
@@ -38,7 +39,7 @@ public class Main {
                     scanner.nextLine();
 
                     if (accion == 1) {
-                        System.out.println("*** Figuras Regulares ***");
+                        System.out.println("****** Figuras Regulares ******");
                         System.out.println("¿Qué acción desea realizar?");
                         System.out.println("1. Crear Cuadrilátero");
                         System.out.println("2. Crear Triángulo");
@@ -53,7 +54,7 @@ public class Main {
                                 System.out.println("***** CUADRILATERO *****.");
                                 cuadrilatero cuadrilatero = new cuadrilatero();
                                 System.out.print("Ingrese el valor del lado del cuadrilátero: ");
-                                double lado = scanner.nextDouble();
+                                Double lado = scanner.nextDouble();
                                 cuadrilatero.setLado(lado);
                                 cuadrilatero.mostrarDatos();
                                 break;
@@ -61,19 +62,28 @@ public class Main {
                                 System.out.println("***** TRIANGULO *****.");
                                 Triangulo triangulo = new Triangulo();
                                 System.out.print("Ingrese el valor de la base del triángulo: ");
-                                double base = scanner.nextDouble();
+                                Double base = scanner.nextDouble();
                                 triangulo.setBase(base);
                                 System.out.print("Ingrese el valor de la altura del triángulo: ");
-                                double altura = scanner.nextDouble();
+                                Double altura = scanner.nextDouble();
+                                System.out.print("Ingrese el valor del primer lado: ");
+                                Double primer = scanner.nextDouble();
+                                System.out.print("Ingrese el valor del segundo lado: ");
+                                Double segundo = scanner.nextDouble();
+                                System.out.print("Ingrese el valor del tercer lado: ");
+                                Double tercer = scanner.nextDouble();
                                 triangulo.setAltura(altura);
                                 triangulo.setLado(base);
+                                triangulo.setLado(primer);
+                                triangulo.setLado2(segundo);
+                                triangulo.setLado3(tercer);
                                 triangulo.mostrarDatos();
                                 break;
                             case 3:
                                 System.out.println("***** CIRCULO *****.");
                                 Circulo circulo = new Circulo();
                                 System.out.print("Ingrese el radio del círculo: ");
-                                double radio = scanner.nextDouble();
+                                Double radio = scanner.nextDouble();
                                 circulo.setRadio(radio);
                                 circulo.mostrarDatos();
                                 break;
@@ -84,21 +94,9 @@ public class Main {
                                 System.out.println("Opción no válida. Por favor, intenta de nuevo.");
                         }
                     } else if (accion == 2) {
-                        System.out.println("*** FIGURA IRREGULARES ***");
-                        System.out.println("Ingrese el número de vértices de la figura irregular:");
-                        int n = scanner.nextInt();
-                        Double[] x = new Double[n];
-                        Double[] y = new Double[n];
-
-                        for (int i = 0; i < n; i++) {
-                            System.out.println("Ingrese la coordenada x del vértice " + (i + 1) + ":");
-                            x[i] = scanner.nextDouble();
-                            System.out.println("Ingrese la coordenada y del vértice " + (i + 1) + ":");
-                            y[i] = scanner.nextDouble();
-                        }
-
-                        Irregulares figuraIrregular = new Irregulares(x, y);
-                        figuraIrregular.mostrar_datos();
+                        Irregulares poligono = new Irregulares();
+                        poligono.ingresarDatos();
+                        poligono.mostrar_datos();
 
                     } else {
                         System.out.println("Opción inválida. Por favor, intenta de nuevo.");

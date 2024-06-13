@@ -1,19 +1,65 @@
 package Figuras;
+import java.util.Scanner;
 
-public class Irregulares extends dosD {
-    private final Double[] x;
-    private final Double[] y;
-    private final int n;
+public class Irregulares extends dosD{
+    private Double[] x;
+    private Double[] y;
+    private int n;
+
+    // Constructor
+    public Irregulares() {}
 
     public Irregulares(Double[] x, Double[] y) {
-        if (x.length != y.length) {
-            throw new IllegalArgumentException("Las coordenadas x e y deben tener la misma longitud");
-        }
         this.x = x;
         this.y = y;
         this.n = x.length;
     }
+    //Getters y setters
 
+
+    public Double[] getX() {
+        return x;
+    }
+
+    public void setX(Double[] x) {
+        this.x = x;
+    }
+
+    public Double[] getY() {
+        return y;
+    }
+
+    public void setY(Double[] y) {
+        this.y = y;
+    }
+
+    public int getN() {
+        return n;
+    }
+
+    public void setN(int n) {
+        this.n = n;
+    }
+    //Metodos personalizados
+    public void ingresarDatos() {
+        System.out.println("*** FIGURA IRREGULARES ***");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese el nombre de la figura: ");
+        this.setNombre(scanner.nextLine());
+
+        System.out.print("Ingrese el número de vértices del polígono: ");
+        n = scanner.nextInt();
+
+        x = new Double[n];
+        y = new Double[n];
+
+        for (int i = 0; i < this.n; i++) {
+            System.out.print("Ingrese la coordenada x del vértice " + (i + 1) + ": ");
+            x[i] = scanner.nextDouble();
+            System.out.print("Ingrese la coordenada y del vértice " + (i + 1) + ": ");
+            y[i] = scanner.nextDouble();
+        }
+    }
     @Override
     public Double calcularPerimetro() {
         double perimetro = 0.0;
@@ -23,7 +69,6 @@ public class Irregulares extends dosD {
         }
         return perimetro;
     }
-
     @Override
     public Double calcularArea() {
         double area = 0.0;
@@ -36,7 +81,8 @@ public class Irregulares extends dosD {
     }
     @Override
     public void mostrar_datos () {
-        System.out.println("El perímetro de la figura irregular es: " + calcularPerimetro());
+        String redondeo = String.format("%.2f", calcularPerimetro());
+        System.out.println("El perímetro de la figura irregular es: " + redondeo);
         System.out.println("El área de la figura irregular es: " + calcularArea());
     }
 }
