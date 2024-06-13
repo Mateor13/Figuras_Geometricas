@@ -1,6 +1,6 @@
 package Figuras;
-
 public class dosD extends Figurasgeometricas {
+
     Double area;
     Double perimetro;
     Double lado;
@@ -13,7 +13,6 @@ public class dosD extends Figurasgeometricas {
         this.area = area;
         this.perimetro = perimetro;
         this.lado = lado;
-
     }
 
     // Getters y setters
